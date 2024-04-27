@@ -262,7 +262,12 @@ public class ContainerPocketTable extends ContainerBase {
                 return ItemStack.EMPTY;
             }
 
-            for (int count = getMaxCraftingAttempts(res); count > 0; count--) {
+            int count = getMaxCraftingAttempts(res);
+            if (count <= 0) {
+                return ItemStack.EMPTY;
+            }
+
+            for (; count > 0; count--) {
                 ItemStack craftedStack = craftResultSlot.getStack().copy();
                 tryTransferStackInSlot(player, craftResultSlot, nonCraftingInventorySlots);
                 craftResultSlot.onTake(player, craftedStack);

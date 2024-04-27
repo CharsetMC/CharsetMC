@@ -3,7 +3,7 @@ buildscript {
 		jcenter()
 		maven {
 			name = "forge"
-			url = "http://files.minecraftforge.net/maven"
+			url = "https://files.minecraftforge.net/maven"
 		}
 		maven {
 			url "https://plugins.gradle.org/m2/"
@@ -117,22 +117,22 @@ dependencies {
 //	shadow name: "ibxm", version: "a73"
 
 	// APIs
-	deobfCompile name: "appliedenergistics2", version: "rv6-stable-7"
-	deobfCompile name: "Baubles", version: "1.12-1.5.2"
-	deobfCompile "com.mod-buildcraft:buildcraft-api:7.99.24.6"
-	deobfCompile name: "chiselsandbits", version: "14.33"
-	deobfCompile name: "CommonCapabilities", version: "1.12.2-2.4.8"
-	deobfCompile name: "CyclopsCore", version: "1.12.2-1.6.7"
-	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.592"
-	deobfCompile name: "Guide-API", version: "1.12-2.1.8-63"
-	deobfCompile "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2:api"
-	deobfCompile name: "infraredstone", version: "1.12.2-1.2.104-api"
-	deobfCompile name: "InventoryTweaks", version: "1.63-api"
+	deobfProvided name: "appliedenergistics2", version: "rv6-stable-7"
+	deobfProvided name: "Baubles", version: "1.12-1.5.2"
+	deobfProvided "com.mod-buildcraft:buildcraft-api:7.99.24.6"
+	deobfProvided name: "chiselsandbits", version: "14.33"
+	deobfProvided name: "CommonCapabilities", version: "1.12.2-2.4.8"
+	deobfProvided name: "CyclopsCore", version: "1.12.2-1.6.7"
+	deobfProvided "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.592"
+	deobfProvided name: "Guide-API", version: "1.12-2.1.8-63"
+	deobfProvided "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2:api"
+	deobfProvided name: "infraredstone", version: "1.12.2-1.2.104-api"
+	deobfProvided name: "InventoryTweaks", version: "1.63-api"
 	deobfCompile "mezz.jei:jei_1.12.2:4.16.1.302"
 	deobfCompile "MCMultiPart2:MCMultiPart-exp:2.5.3_73"
-	deobfCompile "li.cil.oc:OpenComputers:MC1.12.2-1.7.5.+:api"
-	deobfCompile name: "theoneprobe", version: "1.12-1.4.19-api"
-	deobfCompile "li.cil.tis3d:TIS-3D:MC1.12.2-1.5.1.+:api"
+	deobfProvided "li.cil.oc:OpenComputers:MC1.12.2-1.7.5.+:api"
+	deobfProvided name: "theoneprobe", version: "1.12-1.4.19-api"
+	deobfProvided "li.cil.tis3d:TIS-3D:MC1.12.2-1.5.1.+:api"
 }
 
 sourceSets {
