@@ -24,6 +24,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import pl.asie.charset.lib.utils.ItemUtils;
 
 import java.util.ArrayList;
@@ -52,7 +53,10 @@ public abstract class ContainerBase extends Container {
 
 	@Override
 	public boolean canInteractWith(EntityPlayer player) {
-		return isOwnerPresent() && containerHandler != null ? containerHandler.isUsableByPlayer(player) : (owner == player);
+		return isOwnerPresent() && (containerHandler != null ? containerHandler.isUsableByPlayer(player) : (owner == player)) 
+			&& (containerHandler instanceof TileEntity ? 
+			    	((TileEntity) containerHandler).world.getTileEntity(((TileEntity) containerHandler).getPos()) == ((TileEntity) containerHandler) 
+				: true);
 	}
 
 	@Override
