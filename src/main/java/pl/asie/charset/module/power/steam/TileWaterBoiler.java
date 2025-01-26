@@ -141,7 +141,7 @@ public class TileWaterBoiler extends TileMirrorTargetBase implements ITickable {
 		if (waterTank.getFluidAmount() < 1000) {
 			BlockPos below = pos.down();
 			while (world.getTileEntity(below) instanceof TileWaterBoiler) {
-				below = pos.down();
+				below = below.down();
 			}
 			FluidStack desiredAmount = new FluidStack(FluidRegistry.WATER, 1000);
 
@@ -183,7 +183,7 @@ public class TileWaterBoiler extends TileMirrorTargetBase implements ITickable {
 
 		BlockPos ppos = pos.up();
 		while (world.getTileEntity(ppos) instanceof TileWaterBoiler) {
-			ppos = pos.up();
+			ppos = ppos.up();
 		}
 
 		toBoil *= CharsetPowerSteam.BOILER_OUTPUT_MULTIPLIER;
